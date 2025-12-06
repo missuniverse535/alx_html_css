@@ -186,3 +186,106 @@ main section:nth-of-type(2) p {
     font-style: italic;
     opacity: 0.8;
 }
+
+main section:nth-of-type(3) {
+    background-color: #FFFFFF;
+    padding: 100px 0 100px 0;
+}
+
+main section:nth-of-type(3) h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #071629;
+    text-align: center;
+    margin-bottom: 74px;
+}
+
+.tutorials-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tutorial-card {
+    width: 255px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tutorial-card img {
+    width: 100%;
+    height: 154px;
+    object-fit: cover;
+}
+
+.tutorial-content {
+    padding: 30px 20px 25px 20px;
+}
+
+.tutorial-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #071629;
+    margin-bottom: 10px;
+}
+
+.tutorial-card > p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #071629;
+    opacity: 0.5;
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+
+.instructor-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.instructor-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.instructor-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #C271FF;
+}
+
+.rating {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.rating i {
+    color: #C271FF;
+    font-size: 12px;
+}
+
+.duration {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #C271FF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.duration i {
+    color: #C271FF;
+}
+
+.duration p {
+    color: #C271FF;
+    font-size: 14px;
+    font-weight: 600;
+}
