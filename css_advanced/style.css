@@ -289,3 +289,60 @@ main section:nth-of-type(3) h2 {
     font-size: 14px;
     font-weight: 600;
 }
+/* Membership Section */
+main section:nth-of-type(4) {
+    background-color: #071629;
+    padding: 100px 0;
+    text-align: center;
+}
+
+main section:nth-of-type(4) h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin-bottom: 74px;
+}
+.membership-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    max-width: 935px;
+    margin: 0 auto 74px auto;
+}
+.membership-card {
+    width: 257px;
+    text-align: center;
+}
+
+.membership-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+.membership-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.membership-card p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: 0.8;
+    line-height: 24px;
+}
+
+.membership-button {
+    background-color: #C271FF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 22px;
+    padding: 13px 31.5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5);
+}
