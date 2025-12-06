@@ -136,12 +136,53 @@ main section:first-of-type > div:nth-child(2) p {
     line-height: 24px;
     opacity: 0.5;
 }
-
-/* Font Import - Add this at the top or in HTML head */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
+}
+/* Quote/Testimonial Section */
+main section:nth-of-type(2) {
+    background-color: #C271FF;
+    padding: 118px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main section:nth-of-type(2) > div:first-child {
+    margin-right: 67px;
+}
+
+main section:nth-of-type(2) img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main section:nth-of-type(2) blockquote {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #FFFFFF;
+    max-width: 950px;
+    margin-bottom: 37px;
+}
+
+main section:nth-of-type(2) h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+main section:nth-of-type(2) p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-style: italic;
+    opacity: 0.8;
 }
