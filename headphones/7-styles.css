@@ -1,0 +1,433 @@
+/* ==============================
+   ANIMATIONS FOR "WHAT WE DO"
+   ============================== */
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.service-item {
+    flex: 0 0 200px;
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Continuous Animation for Service Items */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.service-item {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Stagger the animation for each item */
+.service-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.service-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.service-item:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.service-item:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+/* Service Icon Animations */
+.service-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Continuous rotation for icons */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.service-icon {
+    animation: spin 8s linear infinite;
+}
+
+/* Pause rotation on hover */
+.service-item:hover .service-icon {
+    animation-play-state: paused;
+    transform: scale(1.2) rotate(15deg);
+}
+
+/* Bounce animation for icons */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.service-icon:hover {
+    animation: bounce 0.6s ease;
+}
+
+/* Hover Effects for Service Items */
+.service-item:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 101, 101, 0.2);
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+}
+
+/* Pulse effect on hover */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 101, 101, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 101, 101, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 101, 101, 0);
+    }
+}
+
+.service-item:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Text Animation */
+.service-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .service-title {
+    color: #FF6565;
+    transform: scale(1.1);
+}
+
+/* Description slide-up animation */
+.service-description {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    height: 0;
+}
+
+.service-item:hover .service-description {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+}
+
+/* ==============================
+   ENHANCED ANIMATIONS FOR PENTAGONS (OUR RESULTS)
+   ============================== */
+
+/* Enhanced pentagon floating animation */
+@keyframes floatPentagon {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+    75% {
+        transform: translateY(5px) rotate(-2deg);
+    }
+}
+
+.pentagon-item {
+    animation: floatPentagon 6s ease-in-out infinite;
+}
+
+/* Different animation timing for each pentagon */
+.pentagon-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.pentagon-item:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.pentagon-item:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.pentagon-item:nth-child(4) {
+    animation-delay: 4.5s;
+}
+
+/* Enhanced hover effects for pentagons */
+.pentagon-item:hover .pentagon-shape {
+    animation: bouncePentagon 0.5s ease;
+    transform: scale(1.15);
+    box-shadow: 0 20px 40px rgba(255, 101, 101, 0.5);
+}
+
+@keyframes bouncePentagon {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Inner content animations */
+.pentagon-content {
+    transition: all 0.3s ease;
+}
+
+.pentagon-item:hover .pentagon-content {
+    transform: scale(1.1);
+}
+
+/* Percentage counter animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.percentage {
+    animation: countUp 0.8s ease-out;
+}
+
+/* Glowing border animation for pentagons */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(255, 101, 101, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 101, 101, 0.8),
+                    0 0 30px rgba(255, 101, 101, 0.6),
+                    0 0 40px rgba(255, 101, 101, 0.4);
+    }
+}
+
+.pentagon-shape {
+    animation: glow 3s ease-in-out infinite;
+}
+
+/* ==============================
+   SECTION ENTRANCE ANIMATIONS
+   ============================== */
+
+/* Entrance animation for sections */
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.what-we-do,
+.our-results {
+    animation: slideInFromBottom 1s ease-out;
+}
+
+/* Stagger animation for service items entrance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-item {
+    animation: fadeInUp 0.8s ease-out forwards, float 4s ease-in-out infinite 0.8s;
+    opacity: 0;
+}
+
+/* Stagger the entrance animation */
+.service-item:nth-child(1) {
+    animation-delay: 0.1s, 0.9s;
+}
+
+.service-item:nth-child(2) {
+    animation-delay: 0.2s, 1s;
+}
+
+.service-item:nth-child(3) {
+    animation-delay: 0.3s, 1.1s;
+}
+
+.service-item:nth-child(4) {
+    animation-delay: 0.4s, 1.2s;
+}
+
+/* ==============================
+   INTERACTIVE HOVER EFFECTS
+   ============================== */
+
+/* Color change animation */
+@keyframes colorChange {
+    0% {
+        background: linear-gradient(135deg, #FF6565, #ff5252);
+    }
+    25% {
+        background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    }
+    50% {
+        background: linear-gradient(135deg, #2196F3, #0D47A1);
+    }
+    75% {
+        background: linear-gradient(135deg, #FF9A3D, #ff7b00);
+    }
+    100% {
+        background: linear-gradient(135deg, #FF6565, #ff5252);
+    }
+}
+
+.pentagon-item:hover .pentagon-shape {
+    animation: colorChange 2s infinite linear, bouncePentagon 0.5s ease;
+}
+
+/* ==============================
+   RESPONSIVE ANIMATIONS
+   ============================== */
+
+@media (max-width: 768px) {
+    /* Reduce animation intensity on mobile */
+    .service-item {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    .service-icon {
+        animation: none;
+    }
+    
+    .pentagon-shape {
+        animation: glow 5s ease-in-out infinite;
+    }
+    
+    /* Simpler animations for better mobile performance */
+    .service-item:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    
+    .pentagon-item:hover .pentagon-shape {
+        transform: scale(1.05);
+        animation: none;
+    }
+}
+
+/* ==============================
+   ACCESSIBILITY CONSIDERATIONS
+   ============================== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==============================
+   ADDITIONAL FUN ANIMATIONS
+   ============================== */
+
+/* Shake animation for icons on hover */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.service-item:hover .service-icon {
+    animation: shake 0.5s ease;
+}
+
+/* Wave animation for the whole row */
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(5px); }
+}
+
+.services-grid:hover .service-item {
+    animation: wave 1s ease;
+}
+
+/* Individual item delay for wave effect */
+.services-grid:hover .service-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.services-grid:hover .service-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.services-grid:hover .service-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+/* ==============================
+   ANIMATION CONTROLS CLASSES
+   ============================== */
+
+/* Optional: Add these classes to control animations via JS if needed */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
