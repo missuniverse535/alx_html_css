@@ -1,0 +1,312 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #FF6565;
+    --text-color: #071629;
+    --white: #FFFFFF;
+    --max-width: 1000px;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--white);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a:active {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 100px;
+}
+
+.hero-content {
+    margin-bottom: 60px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero > .container > p {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 40px;
+    border-radius: 22px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+    opacity: 0.9;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 40px auto 0;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* What We Do Section */
+.what-we-do {
+    padding: 100px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.section-header {
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.section-header p {
+    font-size: 16px;
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.8;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    padding: 20px;
+}
+
+.service-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #FF6565;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--white);
+    font-size: 50px;
+}
+
+.service-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.service-item p {
+    font-size: 14px;
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Icon Styles - Based on Holberton School Icon Font */
+.holberton_school-icon-ic_sound:before {
+    content: "\e900";
+}
+
+.holberton_school-icon-ic_video:before {
+    content: "\e901";
+}
+
+.holberton_school-icon-ic_music:before {
+    content: "\e902";
+}
+
+.holberton_school-icon-ic_hearing:before {
+    content: "\e903";
+}
+
+/* Mobile Responsive - 480px and below */
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 0;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo h1 {
+        font-size: 24px;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .nav-menu a {
+        font-size: 10px;
+    }
+    
+    .hero {
+        padding-top: 120px;
+    }
+    
+    .hero h2 {
+        font-size: 24px;
+    }
+    
+    .hero > .container > p {
+        font-size: 14px;
+    }
+    
+    .btn {
+        padding: 12px 30px;
+        font-size: 12px;
+    }
+    
+    .hero-text p {
+        font-size: 14px;
+    }
+    
+    .what-we-do {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+    }
+    
+    .section-header p {
+        font-size: 14px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+}
+
+/* Tablet Responsive - 481px to 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .logo h1 {
+        font-size: 28px;
+    }
+    
+    .nav-menu {
+        gap: 30px;
+    }
+    
+    .hero h2 {
+        font-size: 28px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Desktop adjustments */
+@media (min-width: 769px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
