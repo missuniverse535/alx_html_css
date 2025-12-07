@@ -1,0 +1,137 @@
+/* Footer Styles */
+.footer {
+    background-color: #071629;
+    color: white;
+    padding: 60px 20px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+/* Logo Styles */
+.footer-logo h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.footer-logo h2:hover {
+    color: #FF6565;
+}
+
+/* Social Icons */
+.footer-social {
+    display: flex;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-icon:hover {
+    background-color: #FF6565;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 101, 101, 0.4);
+}
+
+/* Copyright */
+.footer-copyright {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.footer-copyright p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px;
+    }
+    
+    .footer-logo h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-social {
+        gap: 15px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .footer-content {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-social {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .footer-logo h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animation for footer appearance */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-content {
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Hover animation for copyright */
+.footer-copyright p {
+    transition: color 0.3s ease;
+}
+
+.footer-copyright p:hover {
+    color: #FF6565;
+}
